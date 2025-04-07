@@ -1,4 +1,4 @@
-(function(){
+(function smoothScroll(){
     function scrollSmoothlyTo(element) {
       element.scrollIntoView({
         behavior: 'smooth'
@@ -28,7 +28,6 @@
       link.addEventListener('click', handleInternalLinkClick)
     })
     
-    //ToDo: add smooth scrolling on popstate (when navigating back and forward)
+    // ToDo: add smooth scrolling on popstate (when navigating back and forward)
+    // from: https://github.com/DaniBr/wikipedia-smooth-scroll/
 })()
-
-// https://github.com/DaniBr/wikipedia-smooth-scroll/
