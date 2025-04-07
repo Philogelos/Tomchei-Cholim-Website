@@ -72,4 +72,20 @@ h1 {
     text-align: center;
 }
 
+#intro {
+    position: relative;
+    
+    & > img {
+        width: 100%;
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        z-index: 1;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
+        mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
+    }
+    h2 {
+        z-index: 2;
+    }
+    
 
+}
