@@ -103,5 +103,28 @@ h1 {
     h2 { font-size: 2vw;}
     p { font-size: 110%;}
 }
+
+#story {
+    img {
+        width: 50%;
+    }
+}
+
+#services, #plans {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto;
+
+    h2 {
+        grid-column: 1 / 4;
+    }
+
+    section {
+
+        img {
+            width: 100%;
+        }
+    }
+}
 // https://dribbble.com/tags/hero-section
 // https://dribbble.com/shots/24173570-Alpine-Sport-Mobile-App-Landing-Page
