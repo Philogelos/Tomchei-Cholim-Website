@@ -2,6 +2,8 @@ $bg-color: #ccf5ed;
 $main-color: #019a85;
 $desktop-site-width: 1000px;
 $side-padding: 12px;
+$both-sides-padding: calc(2 * $side-padding);
+$desktop-whole-site-width: calc($desktop-site-width + $both-sides-padding);
 
 html,body {
     padding: 0;
@@ -74,18 +76,28 @@ h1 {
 
 #intro {
     position: relative;
+    overflow: hidden;
+    // aspect-ratio: 1000 / 555;
+    --width: calc(min(#{$desktop-whole-site-width}, 100vw) - #{$both-sides-padding});
+    height: calc(var(--width) * 0.555);
+    padding: 0 $side-padding;
     
     & > img {
         width: 100%;
         position: absolute;
-        top: 0; left: 0; right: 0;
+        bottom: 0; left: 0; right: 0;
         z-index: 1;
-        -webkit-mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
-        mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
-    }
-    h2 {
-        z-index: 2;
+        //-webkit-mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
+        //mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
     }
     
+    h1, h2, p {
+        position: relative;
+        z-index: 2;
+        text-shadow: 0px 0px 7px black, 0px 0px 3px white;
+    }
 
+    h1 { font-size: 3.2vw;}
+    h2 { font-size: 3vw;}
+    p { font-size: 150%;}
 }
