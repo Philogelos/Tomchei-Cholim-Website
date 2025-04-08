@@ -4,6 +4,7 @@ $desktop-site-width: 1000px;
 $side-padding: 12px;
 $both-sides-padding: calc(2 * $side-padding);
 $desktop-whole-site-width: calc($desktop-site-width + $both-sides-padding);
+$separation-line: 1px dotted lightgray;
 
 html,body {
     padding: 0;
@@ -48,6 +49,8 @@ $main-nav-height: 50px;
         max-width: 100%;
         text-align: center;
         background-color: $bg-color;
+        border-bottom: $separation-line;
+        box-sizing: border-box;
 
         ul {
             overflow: hidden;
@@ -69,6 +72,10 @@ $main-nav-height: 50px;
     @media (max-width: 600px) { // small screen
 
     }
+}
+
+article {
+    border-bottom: $separation-line;
 }
 
 h1 {
@@ -111,18 +118,25 @@ h1 {
 }
 
 #services, #plans {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: auto auto auto;
-
-    h2 {
-        grid-column: 1 / 4;
-    }
-
     section {
-
         img {
             width: 100%;
+        }
+    }
+
+    @media (min-width: 651px) { // large screen
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto auto auto;
+
+        h2 {
+            grid-column: 1 / 4;
+        }
+    }
+
+    @media (max-width: 650px) { // small screen
+        section {
+            border-bottom: $separation-line;
         }
     }
 }
