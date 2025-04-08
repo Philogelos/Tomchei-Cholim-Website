@@ -80,24 +80,27 @@ h1 {
     // aspect-ratio: 1000 / 555;
     --width: calc(min(#{$desktop-whole-site-width}, 100vw) - #{$both-sides-padding});
     height: calc(var(--width) * 0.555);
-    padding: 0 $side-padding;
+    //padding: 0 $side-padding;
     
     & > img {
         width: 100%;
         position: absolute;
         bottom: 0; left: 0; right: 0;
         z-index: 1;
-        //-webkit-mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
-        //mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
+        -webkit-mask-image: linear-gradient(to right, transparent 3%, black 20% 40%, transparent, transparent 80% 100%);
+        mask-image: linear-gradient(to right, transparent 3%, black 20% 40%, transparent, transparent 80% 100%);
     }
     
     h1, h2, p {
         position: relative;
         z-index: 2;
-        text-shadow: 0px 0px 7px black, 0px 0px 3px white;
+        text-shadow: 0px 0px 7px $bg-color;
+        padding-left: 50%;
     }
 
-    h1 { font-size: 3.2vw;}
-    h2 { font-size: 3vw;}
-    p { font-size: 150%;}
+    h1 { font-size: 2.8vw;}
+    h2 { font-size: 2vw;}
+    p { font-size: 110%;}
 }
+// https://dribbble.com/tags/hero-section
+// https://dribbble.com/shots/24173570-Alpine-Sport-Mobile-App-Landing-Page
