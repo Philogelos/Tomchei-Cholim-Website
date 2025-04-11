@@ -1,5 +1,6 @@
 $bg-color: #ccf5ed;
 $main-color: #09333f;
+$header-bg-color: #44c0c5;
 $desktop-site-width: 1000px;
 $side-padding: 12px;
 $both-sides-padding: calc(2 * $side-padding);
@@ -75,11 +76,18 @@ $main-nav-height: 50px;
 }
 
 article {
+    padding-bottom: 5px;
     border-bottom: $separation-line;
 }
 
 h1 {
     text-align: center;
+}
+
+article:not(#intro) h2 {
+    background-color: $header-bg-color;
+    line-height: 2.5;
+    padding-left: 80px;
 }
 
 #intro {
