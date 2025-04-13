@@ -134,8 +134,15 @@ article:not(#intro) h2 {
 }
 
 #story {
-    img {
-        width: 50%;
+    @media (min-width: 651px) { // large screen
+        h2 + div {
+            column-count: 2;
+            column-gap: 30px;
+            column-rule: $separation-line;
+        }
+        img {
+            width: 90%;
+        }
     }
 }
 
