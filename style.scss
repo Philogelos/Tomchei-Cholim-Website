@@ -7,6 +7,11 @@ $both-sides-padding: calc(2 * $side-padding);
 $desktop-whole-site-width: calc($desktop-site-width + $both-sides-padding);
 $separation-line: 1px dotted lightgray;
 
+%standard-radius {
+    border-radius: 10px;
+}
+
+
 html,body {
     padding: 0;
     margin: 0;
@@ -91,7 +96,7 @@ article:not(#intro) h2 {
 }
 
 img {
-    border-radius: 10px;
+    @extend %standard-radius;
 }
 
 #intro {
@@ -155,6 +160,7 @@ img {
     section {
         box-shadow: 0 0 5px 5px lightgrey;
         padding: 10px;
+        @extend %standard-radius;
 
         img {
             width: 100%;
