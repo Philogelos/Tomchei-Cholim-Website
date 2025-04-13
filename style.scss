@@ -160,10 +160,15 @@ img {
     section {
         box-shadow: 0 0 5px 5px lightgrey;
         padding: 10px;
+        height: 500px;
+        font-size: 17px;
         @extend %standard-radius;
+        overflow: scroll;
+        text-overflow: ellipsis;
 
         img {
-            width: 100%;
+            width: 100%;   
+            // max-width: 300px;         
         }
     }
 
@@ -183,6 +188,52 @@ img {
         }
     }
 }
+
+// button { 
+//     position: fixed;
+//     right: 150px;
+//     bottom: 150px;
+//     width: 150px;
+//     padding: 15px;
+//     border-radius: 100px;
+//     background-color: #ff6b5c;
+//     border: none;
+//     box-shadow: ;
+// }
+button { 
+    position: fixed;
+    right: 150px;
+    bottom: 150px;
+    width: 150px;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #ff6b5c; /* Coral accent */
+    color: white; /* High contrast for readability */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Hover effect to give a little feedback */
+button:hover {
+    background-color: #e25448; /* Slightly darker coral */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+}
+
+/* Optional: for accessibility, add focus style */
+button:focus {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+
 /*
 // Desktop view:
 https://www.canva.com/design/DAGkDxkf7wo/lsiWogbXDJlcYoLSMU8F6A/edit
