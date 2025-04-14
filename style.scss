@@ -143,6 +143,10 @@ img {
 }
 
 #story {
+    img {
+        width: 100%;
+    }
+
     @media (min-width: 651px) { // large screen
         h2 + div {
             column-count: 2;
@@ -150,7 +154,6 @@ img {
             column-rule: $separation-line;
         }
         img {
-            width: 100%;
             float: right;
         }
     }
