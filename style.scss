@@ -157,7 +157,7 @@ img {
             float: right;
             margin-bottom: 15px;
 
-            & + p::before {
+            & + *::before {
                 // avoid text hovering over floating image in some screen sizes
                 content: "";
                 display: table;
