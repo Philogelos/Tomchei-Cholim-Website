@@ -214,6 +214,16 @@ img {
 //     border: none;
 //     box-shadow: ;
 // }
+
+#QA{
+    min-height: 330px;
+    line-height: 30px;
+    img {
+        float: right;
+        margin-left: 20px;
+        
+    }
+}
 button { 
     position: fixed;
     right: 150px;
@@ -246,7 +256,9 @@ button:focus {
     outline: 3px solid #fff;
     outline-offset: 2px;
 }
-
+#q1 {
+    margin-top: 50px;
+}
 
 
 /*
