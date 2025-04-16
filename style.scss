@@ -222,15 +222,21 @@ img {
 //     box-shadow: ;
 // }
 
-#QA{
+#FAQ {
     min-height: 330px;
     line-height: 30px;
+
     img {
         float: right;
         margin-left: 20px;
         
     }
+
+    details:first-of-type {
+        margin-top: 50px;
+    }
 }
+
 button { 
     position: fixed;
     right: 150px;
@@ -263,10 +269,17 @@ button:focus {
     outline: 3px solid #fff;
     outline-offset: 2px;
 }
-#q1 {
-    margin-top: 50px;
-}
 
+#contact {
+    img {
+        float: right;
+    }
+
+}
+#contact-info {
+    max-width: 450px;
+    margin-right: 15px;
+}
 
 /*
 // Desktop view:
