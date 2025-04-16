@@ -54,6 +54,8 @@ img {
 #main-nav {
     position: fixed;
     z-index: 10;
+    margin-left: 30px;
+    margin-top: 30px;
     ul {
         list-style-type: none;
         padding: 0;
@@ -82,7 +84,7 @@ img {
         ul {
             overflow: hidden;
             display: flex;
-            flex-direction: row;
+            flex-direction: row;    
         }
 
         li {
@@ -97,13 +99,40 @@ img {
         }
     }
     @media (max-width: 600px) { // small screen
+        #open-nav-btn {
+            background-color: #333; // or any color you want
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            display: inline-block;      
+            margin-bottom: 5px;      
+        }
+          
+        #open-nav-btn, #close-nav-btn {
+            text-decoration: none;  
+            font-size: x-large;          
+        }
         &.open { // opened mobile menu
-            background-color: red;
+            background-color: $bg-color;
+            box-shadow: 0 0 5px 5px lightgrey;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 30px;        
+
+            #open-nav-btn {
+                display: none;
+            }          
         }
 
         &:not(.open) { // closed mobile menu
             ul {
-                // display: none;
+                display: none;
+            }
+            
+            #close-nav-btn {
+                display: none;
             }
         }
     }
@@ -139,6 +168,9 @@ img {
         .img { order: 2; }
         h2 { order: 3; }
         p { order: 4; }
+        h1 {            
+            margin-left: 20%;
+        }
 
         .img {
             width: 100%;
@@ -299,6 +331,7 @@ img {
     #contact-info {
         max-width: 450px;
         margin-right: 15px;
+        margin-bottom: 90px;
     }    
 }
 
