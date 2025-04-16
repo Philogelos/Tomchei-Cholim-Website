@@ -6,11 +6,13 @@ $side-padding: 12px;
 $both-sides-padding: calc(2 * $side-padding);
 $desktop-whole-site-width: calc($desktop-site-width + $both-sides-padding);
 $separation-line: 1px dotted lightgray;
+$main-nav-height: 50px;
 
 %standard-radius {
     border-radius: 10px;
 }
 
+// global styles
 
 html,body {
     padding: 0;
@@ -20,7 +22,26 @@ html,body {
     color: $main-color;
 }
 
-$main-nav-height: 50px;
+article {
+    padding-bottom: 5px;
+    border-bottom: $separation-line;
+}
+
+h1 {
+    text-align: center;
+}
+
+article:not(#intro) h2 {
+    background-color: $header-bg-color;
+    line-height: 2.5;
+    padding-left: 80px;
+}
+
+img {
+    @extend %standard-radius;
+}
+
+// section styles
 
 #container {
     max-width: $desktop-site-width;
@@ -86,25 +107,6 @@ $main-nav-height: 50px;
             }
         }
     }
-}
-
-article {
-    padding-bottom: 5px;
-    border-bottom: $separation-line;
-}
-
-h1 {
-    text-align: center;
-}
-
-article:not(#intro) h2 {
-    background-color: $header-bg-color;
-    line-height: 2.5;
-    padding-left: 80px;
-}
-
-img {
-    @extend %standard-radius;
 }
 
 #intro {
@@ -218,18 +220,6 @@ img {
     }
 }
 
-// button { 
-//     position: fixed;
-//     right: 150px;
-//     bottom: 150px;
-//     width: 150px;
-//     padding: 15px;
-//     border-radius: 100px;
-//     background-color: #ff6b5c;
-//     border: none;
-//     box-shadow: ;
-// }
-
 #FAQ {
     min-height: 330px;
     line-height: 30px;
@@ -245,48 +235,71 @@ img {
     }
 }
 
-button { 
-    position: fixed;
-    right: 150px;
-    bottom: 100px;
-    width: 150px;
-    padding: 15px;
-    border-radius: 100px;
-    background-color: #ff6b5c; /* Coral accent */
-    color: white; /* High contrast for readability */
-    font-size: 16px;
-    font-weight: bold;
-    font-family: sans-serif;
-    // text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
+#donate-button {
+    button { 
+        position: fixed;
+        width: 150px;
+        padding: 15px;
+        border-radius: 100px;
+        background-color: #ff6b5c; /* Coral accent */
+        color: white; /* High contrast for readability */
+        font-size: 16px;
+        font-weight: bold;
+        font-family: sans-serif;
+        // text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
 
-/* Hover effect to give a little feedback */
-button:hover {
-    background-color: #e25448; /* Slightly darker coral */
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-    transform: scale(1.05);
-}
+        @media (min-width: 1031px) { // large screen
+            right: 150px;
+            bottom: 100px;    
+        }
+        @media (max-width: 1030px) { // small screen
+            //right: 15px;
+            right: 5%;
+            //right: 5vw;
+            //bottom: 10px;
+            bottom: 3%;
+        }
+        //@media (min-width: 600px) and (max-width: 1031px)
 
-/* Optional: for accessibility, add focus style */
-button:focus {
-    outline: 3px solid #fff;
-    outline-offset: 2px;
+        &:hover {
+            /* Hover effect to give a little feedback */
+            background-color: #e25448; /* Slightly darker coral */
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+            transform: scale(1.05);
+        }
+
+        &:focus {
+            /* Optional: for accessibility, add focus style */
+            outline: 3px solid #fff;
+            outline-offset: 2px;
+        }
+    }
+    // button { 
+    //     position: fixed;
+    //     right: 150px;
+    //     bottom: 150px;
+    //     width: 150px;
+    //     padding: 15px;
+    //     border-radius: 100px;
+    //     background-color: #ff6b5c;
+    //     border: none;
+    //     box-shadow: ;
+    // }
 }
 
 #contact {
     img {
         float: right;
     }
-
-}
-#contact-info {
-    max-width: 450px;
-    margin-right: 15px;
+    #contact-info {
+        max-width: 450px;
+        margin-right: 15px;
+    }    
 }
 
 /*
