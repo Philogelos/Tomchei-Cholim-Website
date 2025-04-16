@@ -76,7 +76,15 @@ $main-nav-height: 50px;
         }
     }
     @media (max-width: 600px) { // small screen
+        &.open { // opened mobile menu
+            background-color: red;
+        }
 
+        &:not(.open) { // closed mobile menu
+            ul {
+                // display: none;
+            }
+        }
     }
 }
 
