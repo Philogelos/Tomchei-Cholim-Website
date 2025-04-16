@@ -258,11 +258,17 @@ img {
     min-height: 330px;
     line-height: 30px;
 
-    img {
-        float: right;
-        margin-left: 20px;
-        
+    @media (max-width: 650px) { // small screen
+        img {
+            width: 100%;
+        }
     }
+    @media (min-width: 651px) { // large screen
+        img {
+            float: right;
+            margin-left: 20px;            
+        }
+    }    
 
     details:first-of-type {
         margin-top: 50px;
@@ -327,8 +333,16 @@ img {
 }
 
 #contact {
-    img {
-        float: right;
+    
+    @media (max-width: 650px) { // small screen
+        img {
+            width: 100%;
+        }
+    }
+    @media (min-width: 651px) { // large screen
+        img {
+            float: right;
+        }
     }
     #contact-info {
         max-width: 450px;
